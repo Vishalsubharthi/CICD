@@ -40,7 +40,7 @@ jobs:
     - name: Check out the code
       uses: actions/checkout@v3
 
-    - name: Set up SonarCloud
+    - name: SonarCloud Scan
       uses: SonarSource/sonarcloud-github-action@v2
       with:
         entryPoint: /opt/sonar-scanner/bin/sonar-scanner
@@ -49,6 +49,7 @@ jobs:
           -Dsonar.projectKey=CICD
           -Dsonar.host.url=https://sonarcloud.io
           -Dsonar.login=${{ secrets.SONAR_TOKEN }}
+        projectBaseDir: .
 
   deploy:
     runs-on: ubuntu-latest
