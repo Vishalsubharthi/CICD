@@ -15,7 +15,11 @@ jobs:
       
     - name: Log in to Docker Hub
       run: |
+        echo "Logging in to Docker Hub..."
+        echo "DOCKER_USERNAME=${{ secrets.DOCKER_USERNAME }}" # For debugging
         echo "${{ secrets.DOCKER_PASSWORD }}" | docker login -u "${{ secrets.DOCKER_USERNAME }}" --password-stdin
+      env:
+        DEBUG: 1
 
     - name: Build the Docker image
       run: docker build . -t devopsport/nodeserver:latest
