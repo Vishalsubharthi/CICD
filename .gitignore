@@ -1,6 +1,7 @@
 # Build and Release Folders
 node_modules
 package-lock.json
+.github/workflows/build-azure-deploy copy.yml
 bin-debug/
 
 bin-release/
