@@ -50,8 +50,6 @@ jobs:
         args: >
           -Dsonar.organization=vishal-kumar
           -Dsonar.projectKey=CICD
-          -Dsonar.python.coverage.reportPaths=coverage.xml
-
   deploy:
     runs-on: ubuntu-latest
     needs: sonarQubeAnalysis
