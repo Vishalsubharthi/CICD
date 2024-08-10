@@ -49,7 +49,7 @@ jobs:
       with:
         args: >
           -Dsonar.organization=vishalsubharthi
-          -Dsonar.projectKey=c05fdd8f
+          -Dsonar.projectKey=CICD
   deploy:
     runs-on: ubuntu-latest
     needs: sonarQubeAnalysis
